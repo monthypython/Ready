@@ -1,27 +1,38 @@
-for(var YOU in HackReactor){
+var presentation = {};
 
-	var me = {
-			name: 'Bianca Gandolfo',
-			follow: '@BiancaGando',
-			info: [
-			 	'HR Cohort 4',
-			 	'Hacker in Residence Cohort 1', 
-			 	'Community Evangelist', 
-			 	'JS Engineer', 
-			 ]
-			};
+presentation.intro = function() {
+	for(var YOU in HackReactor){
 
-	var admissions = email('admissions@hackreactor.com'),
-		lostandFound = email('frontdesk@hackreactor.com'),
-		wifi = { name: 'HackReactor', PW: 'awesomebullets'};
+		var me = {
+				name: 'Bianca Gandolfo',
+				follow: '@BiancaGando',
+				info: [
+				 	'HR Cohort 4',
+				 	'Hacker in Residence Cohort 1', 
+				 	'Community Evangelist', 
+				 	'JS Engineer', 
+				 ]
+				};
 
-	if(YOU === NeedToPee){
-		return 'Bathrooms are past the kitchen on the left';
-	} ;
+		var admissions = email('admissions@hackreactor.com'),
+			lostandFound = email('frontdesk@hackreactor.com'),
+			wifi = { name: 'HackReactor', PW: 'awesomebullets'};
+
+		if(YOU === NeedToPee){
+			return 'Bathrooms are past the kitchen on the left';
+		} ;
+	}
 }
 
 
-var welcome = function(you, Kristen){
+
+
+
+
+
+
+
+presentation['welcome'] = function(you, Kristen){
 	Kristen.who = 'Admissions';
 	Kristen.asks = function(you){
 		return you + ', please read the FAQ and info' + 
@@ -31,14 +42,40 @@ var welcome = function(you, Kristen){
 	return Kristen;
 };
 
-var disclaimer = function(){
+
+
+
+
+
+
+
+
+
+
+
+
+presentaion.disclaimer = function(){
 	return 'This is not a guarantee of admission,'+ 
 	'just helpful guidance on your JS level.' +
 	'I am not directly involved in the admissions process and' +
 	'have no influence over your admissions status.'
 }
 
-var admissionsProcess = function(time) 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+presentation.admissionsProcess = function(time) {
 
 	return {
 		application: {
@@ -81,19 +118,37 @@ var admissionsProcess = function(time)
 };
 
 
-var syntaxChallenges = function(skillz){
-	//write a function called doubler that takes an array of numbers 
+
+
+
+
+
+
+
+
+
+
+presentation.directions = {
+	Step1: 'solve these challenges independentally, without researching',
+	Step2: 'Try to solve Q1-3 in less than 5min',
+	Step3: 'Try to sovle the others in less than 10min',
+	Step4: 'discuss solutions in a small group'
+};
+
+//8:20-8:45
+presentation.['syntaxChallenges'] = function(skillz){
+	// Q1 write a function called doubler that takes an array of numbers 
 	//and return an object whose values are double those numbers
 	//and whose properties are those values (not indices)
 	//input [6,2,9,4]  output => {6: 12, 2: 4, 9: 18, 4: 8}
 //===================================================================
-	//show examples of all the ways you can think of how to add 
+	//Q2 show examples of all the ways you can think of how to add 
 	//properties and values to an object. Do the same for an array
 //===================================================================
-	//show examples of all the ways you can access values, properties
+	//Q3 show examples of all the ways you can access values, properties
 	//and indices of arrays and objects. 
 //===================================================================
-	//have the function NumberSearch(str) take the str parameter, 
+	//Q4 have the function NumberSearch(str) take the str parameter, 
 	//search for all the numbers in the string, add them together, then 
 	//return that final number divided by the total amount of letters 
 	//in the string. For example: if str is "Hello6 9World 2, Nic8e D7ay!"
@@ -108,22 +163,32 @@ var syntaxChallenges = function(skillz){
 
 };
 
-var advancedChallenges = function(madSkillz){
-	//write a function called first that returns the first value 
+
+
+//8:55 - 9:25
+presentation.['advancedChallenges'] = function(madSkillz){
+	//Q5 write a function called first that returns the first value 
 	//in an array 
 	//input ['Hack', 'Reacts', 'loves', 'JS'] output 'Hack'
 //===================================================================
-	//write a function called list that uses the previous function
+	//Q6 write a function called list that uses the previous function
 	//called first but instead returns the last value 
 	//input ['Hack', 'Reacts', 'loves', 'JS'] output 'JS'
 //===================================================================
-	//write a function that adds an array of numbers using recursion
+	//Q7 write a function that adds up all the integers in a value 
+	//using recursion
+	//input => 5 output => 15 (1 + 2 + 3 + 4 + 5)
 //===================================================================
 
 };
 
-var tipsFromInterviewers = function(){
-	'Having them focus on rather they can effectively communicate' +
+
+
+
+
+
+presentation.tipsFromInterviewers = function(){
+	return 'Having them focus on rather they can effectively communicate' +
 	'their confusion to the interviewer would be awesome. The ones' +
 	'that pass are the ones that can express what they don’t understand.' +
 	'And to that, be ok with not understanding, but excited to learn.' +
@@ -137,7 +202,6 @@ var tipsFromInterviewers = function(){
 	'Big offenders: wrong number of arguments, arguments are of wrong type,' +
 	'forgetting to return values from functions'
 }
-
 
 
 
