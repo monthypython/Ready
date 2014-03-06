@@ -14,8 +14,7 @@ presentation.intro = function() {
 				 ]
 				};
 
-		var admissions = email('admissions@hackreactor.com'),
-			lostandFound = email('frontdesk@hackreactor.com'),
+		var lostandFound = email('frontdesk@hackreactor.com'),
 			wifi = { name: 'HackReactor', PW: 'awesomebullets'};
 
 		if(YOU === NeedToPee){
@@ -86,14 +85,19 @@ presentation.admissionsProcess = function(time) {
 				'codeschool', 
 				'learnstreet', 
 				'Khan Academy',
-				'team tree house' ]
+				'team tree house',
+				'adobe train symbol',
+				'project euler',
+				'coderbyte' ]
 		},
 		project: {
-			know: ['jQuery', 'ajax with REST API', 'patience'],
+			know: ['jQuery', 'ajax with REST API', 'patience', 'JSON'],
 			time: '10hours',
 			resources: [ 
 				application.resouces[0], 
-				application.resouces[1] 
+				application.resouces[1],
+				'stackoverflow'
+
 				]
 		},
 		technicalInterview: {
@@ -130,20 +134,33 @@ presentation.admissionsProcess = function(time) {
 
 presentation.directions = {
 	Step1: 'solve these challenges independentally, without researching',
-	Step2: 'Try to solve Q1-3 in less than 5min',
-	Step3: 'Try to sovle the others in less than 10min',
+	Step2: 'Try to solve Q1-3 in less than 5min each',
+	Step3: 'Try to solve the others in less than 10min each',
 	Step4: 'discuss solutions in a small group'
 };
 
+
+
+
+
+
+
+
+
+
+
+
+
+
 //8:20-8:45
-presentation.['syntaxChallenges'] = function(skillz){
-	// Q1 write a function called doubler that takes an array of numbers 
-	//and return an object whose values are double those numbers
+presentation['syntaxChallenges'] = function(skillz){
+	// Q1 write a function called doubler that takes an ARRAY of numbers 
+	//and return an OBJECT whose values are double those numbers
 	//and whose properties are those values (not indices)
 	//input [6,2,9,4]  output => {6: 12, 2: 4, 9: 18, 4: 8}
 //===================================================================
 	//Q2 show examples of all the ways you can think of how to add 
-	//properties and values to an object. Do the same for an array
+	//properties and values to an OBJECT. Do the same for an ARRAY
 //===================================================================
 	//Q3 show examples of all the ways you can access values, properties
 	//and indices of arrays and objects. 
@@ -164,14 +181,12 @@ presentation.['syntaxChallenges'] = function(skillz){
 };
 
 
-
-//8:55 - 9:25
-presentation.['advancedChallenges'] = function(madSkillz){
+presentation['advancedChallenges'] = function(madSkillz){
 	//Q5 write a function called first that returns the first value 
 	//in an array 
 	//input ['Hack', 'Reacts', 'loves', 'JS'] output 'Hack'
 //===================================================================
-	//Q6 write a function called list that uses the previous function
+	//Q6 write a function called last that uses the previous function
 	//called first but instead returns the last value 
 	//input ['Hack', 'Reacts', 'loves', 'JS'] output 'JS'
 //===================================================================
@@ -187,12 +202,14 @@ presentation.['advancedChallenges'] = function(madSkillz){
 
 
 
+
+
 presentation.tipsFromInterviewers = function(){
 	return 'Having them focus on rather they can effectively communicate' +
 	'their confusion to the interviewer would be awesome. The ones' +
 	'that pass are the ones that can express what they don’t understand.' +
 	'And to that, be ok with not understanding, but excited to learn.' +
-	'On a technical note, truly understand the JS basics, loops' + 
+	'On a technical note, truly understand the JS basics, loops,' + 
 	'functions, callbacks, methods. ' +
 
 	'I see most mess up of poor communication, fear to try,' +
